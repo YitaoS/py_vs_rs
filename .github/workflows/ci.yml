@@ -1,0 +1,51 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        make install
+
+    - name: Lint with flake8
+      run: |
+        make lint
+
+    - name: Format with black
+      run: |
+        make format
+
+    - name: Run Tests
+      run: |
+        make test
+
+    - name: Generate report
+      run: |
+        make run
+
+    - name: Deploy
+      run: |
+        make deploy
+    
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}

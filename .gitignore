@@ -1,0 +1,67 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+dist/
+build/
+*.egg-info/
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# Devcontainer settings
+.devcontainer/.env
+.devcontainer/.devcontainer.json
+.devcontainer/Dockerfile
+
+# Pytest cache
+.pytest_cache/
+.cache/
+
+# Test and coverage reports
+.coverage
+*.cover
+*.log
+coverage.xml
+*.lcov
+nosetests.xml
+test_results/
+
+# MyPy cache
+.mypy_cache/
+
+# Bandit security scanning tool cache
+.bandit/
+
+# Pylint scan results
+.pylint.d/
+
+# MacOS
+.DS_Store
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# pyenv
+.python-version
+
+# Editor backups
+*~
+
+# Unit test / coverage results
+htmlcov/
+.tox/
+.nox/
+rust_version/polling_places_analysis/target/

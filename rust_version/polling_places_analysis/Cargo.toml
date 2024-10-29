@@ -1,0 +1,13 @@
+[package]
+name = "polling_places_analysis"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+polars = { version = "0.26", features = ["lazy", "strings", "csv-file"] }
+plotters = "0.3"
+chrono = { version = "0.4", features = ["serde"] }
+encoding_rs = "0.8"
+encoding_rs_io = "0.1"
+tokio = { version = "1", features = ["full"] }
+heim = { version = "0.1.0-alpha.4", features = ["cpu"] }
