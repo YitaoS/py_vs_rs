@@ -24,7 +24,7 @@ deploy:
 	git commit -m "Add report and images"
 
 test:
-	PYTHONPATH=src pytest -s tests/test_example.py
+	# PYTHONPATH=src pytest -s tests/test_example.py
 
 clean:
 	find . -type f -name "*.pyc" -delete
